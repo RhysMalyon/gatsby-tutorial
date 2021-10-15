@@ -17,6 +17,12 @@ const BlogPost = ({ data }) => {
         image={image}
         alt={data.mdx.frontmatter.hero_image_alt}
       />
+      <small>
+        Photo Credit:{" "}
+        <a href={data.mdx.frontmatter.hero_image_credit_link}>
+          {data.mdx.frontmatter.hero_image_credit_text}
+        </a>
+      </small>
       <MDXRenderer>
         {body}
       </MDXRenderer>
